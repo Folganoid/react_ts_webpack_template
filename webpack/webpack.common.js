@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -15,12 +16,16 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-          }
-        ]
+          },
+        ],
       },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
@@ -28,27 +33,32 @@ module.exports = {
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/inline'
-      }
-    ]
+        type: 'asset/inline',
+      },
+    ],
   },
 
   output: {
     path: path.resolve(__dirname, '../build/'),
-    filename: 'bundle.js'
+    filename: '[name].[fullhash].js',
   },
-  plugins:[
+  plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),
-      favicon: "./src/bird.ico"
+      favicon: './src/bird.ico',
     }),
     new CopyPlugin({
-      patterns: [{ from: 'source', to: 'dest'}],
-    })
+      patterns: [{ from: 'source', to: 'dest' }],
+    }),
+    new CleanWebpackPlugin(),
   ],
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-  }
-}
+    maxAssetSize: 512000,
+  },
+  devServer: {
+    port: 3000,
+    historyApiFallback: { index: '/', disableDotRule: true },
+  },
+};

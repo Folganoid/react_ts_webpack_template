@@ -41,3 +41,8 @@
 ### 5
 - npm install -D @babel/runtime @babel/plugin-transform-runtime
 - npm install -D copy-webpack-plugin
+
+### 6 
+- npm install -D sass sass-loader
+- npm install -D clean-webpack-plugin
+- npm install -D uikit-react

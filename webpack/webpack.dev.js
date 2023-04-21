@@ -13,5 +13,5 @@ module.exports = {
       'process.env.name': JSON.stringify('Ololo dev')
     }),
     new ReactRefreshWebpackPlugin(),
-  ]
-}
+  ],
+};
