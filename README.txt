@@ -26,4 +26,14 @@
 - touch /webpack/webpack.prod.js
 - touch /webpack/webpack.common.js
 
+### 4
 
+- npm install -D @pmmmwh/react-refresh-webpack-plugin
+- npm install -D eslint
+- npm install -D eslint-plugin-react eslint-plugin-react eslint-plugin-react-hooks
+- npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
+- touch .eslintrc
+- npm install --save-dev --save-exact prettier
+- touch .prettierrc
+- npm install -D eslint-config-prettier eslint-plugin-prettier
+- npm install eslint-webpack-plugin --save-dev
