@@ -1,10 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
-    extensions: ['.Tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
@@ -38,7 +39,11 @@ module.exports = {
   },
   plugins:[
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', './src/index.html')
+      template: path.resolve(__dirname, '..', './src/index.html'),
+      favicon: "./src/bird.ico"
+    }),
+    new CopyPlugin({
+      patterns: [{ from: 'source', to: 'dest'}],
     })
   ],
   performance: {

@@ -2,10 +2,9 @@ import React from 'react';
 import './styles.css';
 import img from './img.png';
 import imgSvg from './git.svg';
-import Tmp from './Tmp.tsx';
+import Tmp from './Tmp';
 
 export default function App() {
-  const nammm = 'ddd';
   return (
     <>
       <h1>TEST !!!</h1>

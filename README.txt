@@ -37,3 +37,7 @@
 - touch .prettierrc
 - npm install -D eslint-config-prettier eslint-plugin-prettier
 - npm install eslint-webpack-plugin --save-dev
+
+### 5
+- npm install -D @babel/runtime @babel/plugin-transform-runtime
+- npm install -D copy-webpack-plugin
