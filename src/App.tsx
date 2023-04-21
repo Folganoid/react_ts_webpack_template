@@ -7,8 +7,10 @@ export default function App() {
   return (
     <>
       <h1>TEST !!!</h1>
-      <img src={img} alt="image" />
-      <img src={imgSvg} alt="git logo" />
+      <h2>{process.env.NODE_ENV}</h2>
+      <h3>{process.env.name}</h3>
+      <img height="100" src={img} alt="image" />
+      <img height="100" src={imgSvg} alt="git logo" />
     </>
   );
 }

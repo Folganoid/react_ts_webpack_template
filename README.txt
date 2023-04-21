@@ -13,12 +13,17 @@
 - npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 - npm install -D babel-loader
 - mkdir webpack
-- touch webpack.config.js
+- touch /webpack/webpack.config.js
 - add to package.json 
 
 ### 2
 - npm install -D css-loader style-loader
 - touch /src/styles.css
 - touch /src/declarations.d.ts
+
+### 3
+- touch /webpack/webpack.dev.js
+- touch /webpack/webpack.prod.js
+- touch /webpack/webpack.common.js
 
 
