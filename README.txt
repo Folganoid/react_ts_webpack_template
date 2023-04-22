@@ -45,4 +45,7 @@
 ### 6 
 - npm install -D sass sass-loader
 - npm install -D clean-webpack-plugin
-- npm install -D uikit-react
+
+### 7
+- npm i -D redux react-redux
+- npm install -D @reduxjs/toolkit
