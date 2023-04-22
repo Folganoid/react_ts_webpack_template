@@ -49,3 +49,11 @@
 ### 7
 - npm i -D redux react-redux
 - npm install -D @reduxjs/toolkit
+
+### 8
+- npm install --save-dev jest
+- npm install --save-dev ts-jest
+- npm install --save-dev @types/jest
+- npm install --save-dev @testing-library/react
+- npm install --save-dev @testing-library/jest-dom
+- npx ts-jest config:init
