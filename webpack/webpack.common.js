@@ -45,7 +45,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '..', './src/index.html'),
-      favicon: './src/bird.ico',
+      favicon: './src/assets/images/bird.ico',
     }),
     new CopyPlugin({
       patterns: [{ from: 'source', to: 'dest' }],
